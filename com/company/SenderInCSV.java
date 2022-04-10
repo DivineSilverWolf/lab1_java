@@ -2,7 +2,7 @@ package com.company;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class cameCase {
+public class SenderInCSV {
     private final int STARTING_COUNT = 0;
     private final String DELIMITER=" ; ";
     private final String PROCENT_AND_TRANSFER="%\n";
@@ -13,7 +13,7 @@ public class cameCase {
 
     private final String EXCEPTION_STRING="Error while reading file: ";
 
-    public void export_string_to_File_CSV(java.util.Scanner scanner_files_names){
+    public void sendData(java.util.Scanner scanner_files_names){
         java.io.OutputStreamWriter push=null;
         String file_name=scanner_files_names.next();
 
@@ -22,9 +22,9 @@ public class cameCase {
             SortingWords sorting_words=new SortingWords();
             sorting_words.sorting(scanner_files_names);
             for(int i=STARTING_COUNT;i<sorting_words.words_and_numbers().length;i++){
-                StringBuilder word_frequency_percent=new StringBuilder(sorting_words.words_and_numbers()[i].return_word()+DELIMITER+
-                        sorting_words.words_and_numbers()[i].return_word_count()+DELIMITER+
-                        ((double) sorting_words.words_and_numbers()[i].return_word_count())*HUNDRED_PROCENT/
+                StringBuilder word_frequency_percent=new StringBuilder(sorting_words.words_and_numbers()[i].returnWord()+DELIMITER+
+                        sorting_words.words_and_numbers()[i].returnWordCount()+DELIMITER+
+                        ((double) sorting_words.words_and_numbers()[i].returnWordCount())*HUNDRED_PROCENT/
                                 ((double)sorting_words.count_words()) + PROCENT_AND_TRANSFER);
                 push.write(word_frequency_percent.toString());
             }

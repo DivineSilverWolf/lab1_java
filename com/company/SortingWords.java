@@ -13,13 +13,13 @@ public class SortingWords {
     void sorting(java.util.Scanner scanner_files_names) {
 
         StringParser parser = new StringParser();
-        parser.string_parser(scanner_files_names);
+        parser.stringParsing(scanner_files_names);
 
-        TreeMap<String, Integer> sorting_words = parser.sorting_words();
+        TreeMap<String, Integer> sorting_words = parser.sortingWords();
         Set<String> keys = sorting_words.keySet();
 
         words_and_numbers=new PairWordNumber[keys.size()];
-        count_words = parser.count_words();
+        count_words = parser.countWords();
 
         int count = STARTING_COUNT;
         for (String key : keys) {
@@ -30,7 +30,7 @@ public class SortingWords {
         for (int out = words_and_numbers.length - CELL_OFFSET; out > STARTING_COUNT; out--) {
             for (int in = STARTING_COUNT; in < out; in++) {
 
-                if (words_and_numbers[in].return_word_count() > words_and_numbers[in+CELL_OFFSET].return_word_count()) {
+                if (words_and_numbers[in].returnWordCount() > words_and_numbers[in+CELL_OFFSET].returnWordCount()) {
 
                     PairWordNumber tmp=words_and_numbers[in];
                     words_and_numbers[in]=words_and_numbers[in+CELL_OFFSET];

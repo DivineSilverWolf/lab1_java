@@ -10,11 +10,11 @@ public class StringParser {
     private int count_words;
     private TreeMap<String,Integer> word_and_amount = new TreeMap<>();
 
-    public void string_parser(java.util.Scanner scanner_files_names) {
+    public void stringParsing(java.util.Scanner scanner_files_names) {
 
-        ReadFileTXT reading = new ReadFileTXT();
-        reading.reading(scanner_files_names);
-        String file_text=reading.give_file_text();
+        ReaderFileTXT reader = new ReaderFileTXT();
+        reader.reading(scanner_files_names);
+        String file_text=reader.giveFileText();
         java.util.regex.Pattern SENTENCE_PATTERN = java.util.regex.Pattern.compile(regex);
         java.util.regex.Matcher matcher = SENTENCE_PATTERN.matcher(file_text);
         count_words=START_COUNT;
@@ -29,10 +29,10 @@ public class StringParser {
     }
 
 
-    public TreeMap<String,Integer> sorting_words(){
+    public TreeMap<String,Integer> sortingWords(){
         return word_and_amount;
     }
-    public int count_words(){
+    public int countWords(){
         return count_words;
     }
 }

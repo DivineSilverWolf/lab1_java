@@ -19,8 +19,8 @@ public class Main {
 
             Scanner scanner_files_names = new Scanner(args[CSV_NAME_FILE] + FileNAME_SEPARATOR
                     + args[TXT_NAME_FILE]);
-            cameCase Start = new cameCase();
-            Start.export_string_to_File_CSV(scanner_files_names);
+            SenderInCSV Start = new SenderInCSV();
+            Start.sendData(scanner_files_names);
             scanner_files_names.close();
         }
         else{

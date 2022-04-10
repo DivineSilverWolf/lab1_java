@@ -7,13 +7,13 @@ import java.io.FileInputStream;
 
 
 
-public class ReadFileTXT {
+public class ReaderFileTXT {
     private final String ENCODING="Cp1252";
     private final String EXCEPTION_STRING="Error while reading file: ";
     private final int STOPING=-1;
 
     private StringBuilder file_text;
-    public String give_file_text(){
+    public String giveFileText(){
         return file_text.toString();
     }
 

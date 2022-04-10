@@ -7,10 +7,10 @@ public class PairWordNumber {
         this.word=word;
         this.word_count=word_count;
     }
-    public String return_word(){
+    public String returnWord(){
         return word;
     }
-    public Integer return_word_count(){
+    public Integer returnWordCount(){
         return word_count;
     }
 }
