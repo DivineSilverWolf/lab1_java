@@ -1,16 +1,16 @@
-package com.company;
+package com.core;
 
 public class PairWordNumber {
     private String word;
-    private Integer word_count;
-    public PairWordNumber(String word,Integer word_count){
+    private Integer wordCount;
+    public PairWordNumber(String word,Integer wordCount){
         this.word=word;
-        this.word_count=word_count;
+        this.wordCount=wordCount;
     }
     public String returnWord(){
         return word;
     }
     public Integer returnWordCount(){
-        return word_count;
+        return wordCount;
     }
 }

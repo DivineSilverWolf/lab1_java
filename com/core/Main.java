@@ -1,4 +1,4 @@
-package com.company;
+package com.core;
 import java.util.Scanner;
 public class Main {
     private static final int NUMBERofFILE_NAMES=2;
@@ -17,11 +17,11 @@ public class Main {
         if(args.length==NUMBERofFILE_NAMES) {
 
 
-            Scanner scanner_files_names = new Scanner(args[CSV_NAME_FILE] + FileNAME_SEPARATOR
+            Scanner scannerFilesNames = new Scanner(args[CSV_NAME_FILE] + FileNAME_SEPARATOR
                     + args[TXT_NAME_FILE]);
             SenderInCSV Start = new SenderInCSV();
-            Start.sendData(scanner_files_names);
-            scanner_files_names.close();
+            Start.sendData(scannerFilesNames);
+            scannerFilesNames.close();
         }
         else{
             System.out.print(args.length>JUNK_DATA ? DATA_ENTERED + args.length + NECESSARY :

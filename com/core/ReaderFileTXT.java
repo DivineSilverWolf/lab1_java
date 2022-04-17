@@ -1,4 +1,4 @@
-package com.company;
+package com.core;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.InputStreamReader;
@@ -12,21 +12,21 @@ public class ReaderFileTXT {
     private final String EXCEPTION_STRING="Error while reading file: ";
     private final int STOPING=-1;
 
-    private StringBuilder file_text;
+    private StringBuilder fileText;
     public String giveFileText(){
-        return file_text.toString();
+        return fileText.toString();
     }
 
-    public void reading(java.util.Scanner scanner_files_names){
+    public void reading(java.util.Scanner scannerFilesNames){
 
-        file_text=new StringBuilder();
+        fileText=new StringBuilder();
         Reader read=null;
-        String file_name=scanner_files_names.next();
+        String fileName=scannerFilesNames.next();
         try{
-            read = new InputStreamReader(new FileInputStream(file_name),ENCODING);
-            int c;
-            while((c=read.read())!=STOPING){
-                file_text.append((char) c);
+            read = new InputStreamReader(new FileInputStream(fileName),ENCODING);
+            int symbol;
+            while((symbol=read.read())!=STOPING){
+                fileText.append((char) symbol);
             }
         }
         catch (IOException e) {
